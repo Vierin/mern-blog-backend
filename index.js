@@ -33,12 +33,7 @@ const upload = multer({ storage });
 app.use(express.json());
 
 // Cors
-app.use(
-  cors({
-    origin: 'http://localhost:3000',
-    optionsSuccessStatus: 200,
-  })
-);
+app.use(cors());
 
 app.use('/uploads', express.static('uploads')); // чтобы можно было обратиться к картинкам
 
